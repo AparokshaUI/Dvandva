@@ -9,7 +9,7 @@
 import AppKit
 #else
 import Foundation
-import GTUI
+import Libadwaita
 #endif
 
 /// The application.
@@ -36,7 +36,7 @@ public class Application {
     }
 #else
     /// The application for Linux.
-    public let application: GTUIApp
+    public let application: LibadwaitaApp
     /// The currently active window.
     public var keyWindow: Window? {
         windows.first { $0.window.nativePtr == application.getActiveWindow() }
@@ -76,8 +76,8 @@ public class Application {
     }
 
     #if !os(macOS)
-    /// The GTUI Application type for an application in Dvandva.
-    public class GTUIApp: GTUI.Application {
+    /// The Libadwaita Application type for an application in Dvandva.
+    public class LibadwaitaApp: Libadwaita.Application {
 
         /// Actions to run when being activated.
         var actions: [() -> Void] = []

@@ -8,7 +8,7 @@
 #if os(macOS)
 import AppKit
 #else
-import GTUI
+import Libadwaita
 #endif
 
 /// A button that opens a menu when being pressed.
@@ -19,9 +19,9 @@ public class MenuButton: Widget {
     let button: Button
 #else
     /// The widget for Linux.
-    private var button: GTUI.MenuButton? {
+    private var button: Libadwaita.MenuButton? {
         get {
-            widget as? GTUI.MenuButton
+            widget as? Libadwaita.MenuButton
         }
         set {
             if let newValue {

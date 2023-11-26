@@ -6,7 +6,7 @@
 //
 
 #if !os(macOS)
-import GTUI
+import Libadwaita
 
 extension String {
 

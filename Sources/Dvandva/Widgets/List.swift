@@ -9,7 +9,7 @@
 import AppKit
 import SwiftUI
 #else
-import GTUI
+import Libadwaita
 #endif
 
 /// A widget containing multiple items arranged in a list.

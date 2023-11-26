@@ -8,7 +8,7 @@
 #if os(macOS)
 import AppKit
 #else
-import GTUI
+import Libadwaita
 #endif
 
 /// A widget showing a piece of text.
@@ -30,9 +30,9 @@ public class Label: Widget {
     var content: [(NSMenuItem, Menu?)] = []
 #else
     /// The widget for Linux.
-    private var label: GTUI.Label? {
+    private var label: Libadwaita.Label? {
         get {
-            widget as? GTUI.Label
+            widget as? Libadwaita.Label
         }
         set {
             if let newValue {

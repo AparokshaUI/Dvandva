@@ -7,7 +7,7 @@
 ## Classes
 
 -   [Application](classes/Application.md)
--   [Application.GTUIApp](classes/Application.GTUIApp.md)
+-   [Application.LibadwaitaApp](classes/Application.LibadwaitaApp.md)
 -   [Box](classes/Box.md)
 -   [Button](classes/Button.md)
 -   [Label](classes/Label.md)

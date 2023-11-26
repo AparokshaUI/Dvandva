@@ -8,7 +8,7 @@
 #if os(macOS)
 import AppKit
 #else
-import GTUI
+import Libadwaita
 #endif
 
 /// A widget executing an action when being clicked.
@@ -28,9 +28,9 @@ public class Button: Widget {
     }
 #else
     /// The widget for Linux.
-    private var button: GTUI.Button? {
+    private var button: Libadwaita.Button? {
         get {
-            widget as? GTUI.Button
+            widget as? Libadwaita.Button
         }
         set {
             if let newValue {

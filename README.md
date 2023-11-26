@@ -74,7 +74,7 @@ On Linux, you can simply use `swift run`. In certain scenarios, setting up a Fla
 ## Thanks
 
 ### Dependencies
-- [SwiftGui](https://github.com/david-swift/SwiftGui) licensed under the [GPL-3.0 license](https://github.com/david-swift/SwiftGui/blob/main/COPYING)
+- [Libadwaita](https://github.com/AparokshaUI/Libadwaita) licensed under the [GPL-3.0 license](https://github.com/AparokshaUI/Libadwaita/blob/main/LICENSE.md)
 
 ### Other Thanks
 - The [contributors](Contributors.md)

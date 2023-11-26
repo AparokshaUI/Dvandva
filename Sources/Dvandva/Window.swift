@@ -8,7 +8,7 @@
 #if os(macOS)
 import AppKit
 #else
-import GTUI
+import Libadwaita
 #endif
 
 // swiftlint:disable no_grouping_extension
@@ -131,13 +131,13 @@ public class Window: NSObject, NSWindowDelegate {
 public class Window {
 
     /// The window for Linux.
-    let window: GTUI.ApplicationWindow
+    let window: Libadwaita.ApplicationWindow
     /// The window's content is an overlay split view.
-    let content: GTUI.OverlaySplitView = .init()
+    let content: Libadwaita.OverlaySplitView = .init()
     /// The "sub content" is the split view's content.
-    let subContent: GTUI.Box = .init(horizontal: false)
+    let subContent: Libadwaita.Box = .init(horizontal: false)
     /// The window's header bar.
-    let headerBar: GTUI.HeaderBar = .init()
+    let headerBar: Libadwaita.HeaderBar = .init()
     /// The parent application.
     let app: Application
     /// The window's title.
@@ -208,7 +208,7 @@ extension Window {
           ToolbarView(Scrolled().setChild(widget.widget.addStyle("navigation-sidebar"))).addTopBar(HeaderBar())
         )
         content.showSidebar()
-        _ = headerBar.titleWidget(GTUI.Label(""))
+        _ = headerBar.titleWidget(Libadwaita.Label(""))
         #endif
     }
 
@@ -330,7 +330,7 @@ extension Window {
         #if !os(macOS)
         _ = headerBar
             .append(
-                GTUI.MenuButton(icon: .default(icon: .openMenu))
+                Libadwaita.MenuButton(icon: .default(icon: .openMenu))
                     .menu(
                         menu.getMenu().append(
                             "",

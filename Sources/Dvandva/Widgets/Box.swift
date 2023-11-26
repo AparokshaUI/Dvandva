@@ -8,7 +8,7 @@
 #if os(macOS)
 import AppKit
 #else
-import GTUI
+import Libadwaita
 #endif
 
 /// A widget containing multiple items either aligned horizontally or vertically.
@@ -28,9 +28,9 @@ public class Box: Widget {
     }
 #else
     /// The widget for Linux.
-    private var box: GTUI.Box? {
+    private var box: Libadwaita.Box? {
         get {
-            widget as? GTUI.Box
+            widget as? Libadwaita.Box
         }
         set {
             if let newValue {

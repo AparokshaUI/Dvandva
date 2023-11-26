@@ -8,7 +8,7 @@
 #if os(macOS)
 import AppKit
 #else
-import GTUI
+import Libadwaita
 #endif
 
 /// A menu is a collection of buttons, organized in sections and submenus.
@@ -21,7 +21,7 @@ public class Menu {
     var content: [(NSMenuItem, Menu?)] = []
 #else
     /// The menu for Linux.
-    private let menu: GTUI.Menu = .init()
+    private let menu: Libadwaita.Menu = .init()
     /// The menu's content for Linux.
     var content: [String: (KeyboardShortcut?, () -> Void)] = [:]
 #endif
@@ -120,9 +120,9 @@ public class Menu {
         return menu
     }
     #else
-    /// Get the `GTUI.Menu`.
-    /// - Returns: The `GTUI.Menu`.
-    func getMenu() -> GTUI.Menu {
+    /// Get the `Libadwaita.Menu`.
+    /// - Returns: The `Libadwaita.Menu`.
+    func getMenu() -> Libadwaita.Menu {
         menu
     }
     #endif

@@ -6,7 +6,7 @@
 //
 
 #if !os(macOS)
-import GTUI
+import Libadwaita
 #endif
 
 /// The edge of e.g. a widget.
@@ -22,8 +22,8 @@ public enum Edge {
     case trailing
 
     #if !os(macOS)
-    /// Get the edge as a GTUI Edge for Linux.
-    var gtuiEdge: GTUI.Edge {
+    /// Get the edge as a Libadwaita Edge for Linux.
+    var gtuiEdge: Libadwaita.Edge {
         switch self {
         case .top:
             return .top

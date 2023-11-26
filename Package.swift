@@ -14,7 +14,7 @@ let dependencies: [Package.Dependency]
 #if os(macOS)
 dependencies = []
 #else
-dependencies = [.package(url: "https://github.com/david-swift/SwiftGui", from: "0.1.1")]
+dependencies = [.package(url: "https://github.com/AparokshaUI/Libadwaita", from: "0.1.0")]
 #endif
 
 /// The dependencies for the "Dvandva" target.
@@ -24,7 +24,7 @@ let targetDependencies: [Target.Dependency]
 targetDependencies = []
 #else
 targetDependencies = [
-    .product(name: "GTUI", package: "SwiftGui", condition: .when(platforms: [.linux, .openbsd, .windows]))
+    .product(name: "Libadwaita", package: "Libadwaita")
 ]
 #endif
 

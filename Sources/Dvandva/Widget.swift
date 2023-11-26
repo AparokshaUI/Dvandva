@@ -8,7 +8,7 @@
 #if os(macOS)
 import AppKit
 #else
-import GTUI
+import Libadwaita
 #endif
 
 /// A widget is a view in a window.
@@ -23,7 +23,7 @@ public class Widget {
     }
 #else
     // swiftlint:disable implicitly_unwrapped_optional
-    /// The widget as a `GTUI.NativeWidgetPeer`.
+    /// The widget as a `Libadwaita.NativeWidgetPeer`.
     public var widget: NativeWidgetPeer!
     // swiftlint:enable implicitly_unwrapped_optional
 #endif

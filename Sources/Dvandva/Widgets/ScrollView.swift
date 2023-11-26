@@ -10,7 +10,7 @@ import Foundation
 #if os(macOS)
 import AppKit
 #else
-import GTUI
+import Libadwaita
 #endif
 
 /// A scrollable widget containing a child widget.
