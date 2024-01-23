@@ -1,3 +1,7 @@
+> [!NOTE]
+> This project is no longer maintained.
+> I'm working on a declarative framework as an alternative.
+
 <p align="center">
   <img width="256" alt="Dvandva Icon" src="Icons/DvandvaIcon.png">
   <h1 align="center">Dvandva</h1>
